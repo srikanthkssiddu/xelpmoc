@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<title> Fibonacci Series </title> 
+<link rel="stylesheet" href="test2.css"> 
+
+</head>  
+<body>
+    <div class="txt-feild">
+      <label>Number1</label>
+        <input type="text" id="one" class="noone"> 
+    </div>
+    <div class="txt-feild" >
+        <label> Number2</label>
+        <input type="text" id="two" class="notwo">
+    </div> 
+    <div>
+        <input type="submit" value="Enter" class="submit-btn" onclick="fibonacci()"/>
+    </div>
+    <div>
+        <textarea class="result" id="res" readonly> </textarea>
+    </div>
+
+<script>
+  
+  function fibonacci(){
+  let final ="";
+  let result = document.getElementsByClassName("result").value;
+  let number1 = document.getElementById("one").value;
+  let number2 = document.getElementById("two").value;
+  console.log(number1, number2)
+    var d, diff, n, n1, n2, str_, temp, x1, x2;
+x1 = parseInt(number1)
+x2 = parseInt(number2)
+console.log(x1, x2)
+console.log(typeof(x1), typeof(x2))
+diff = x2 - x1;
+d = [x1, x2];
+n = 3;
+var res = "";
+for (var i = 1, _pj_a = n + 1; i < _pj_a; i += 1) {
+  d.push(x2 + i * diff);
+}
+
+for (var w, _pj_c = 0, _pj_a = d, _pj_b = _pj_a.length; _pj_c < _pj_b; _pj_c += 1) {
+  w = _pj_a[_pj_c];
+  n1 = 0;
+  n2 = 1;
+  str = n1.toString() + " " + n2.toString();
+
+  for (var i = 0, _pj_d = w - 2; i < _pj_d; i += 1) {
+    temp = n1 + n2;
+    n1 = n2;
+    n2 = temp;
+    str += " " + temp.toString();
+  }
+    
+   result = str.toString()
+   console.log(result);
+   res+= result + " \n"
+  
+}
+document.getElementById("res").textContent = res
+  }
+
+
+  
+</script>  
+</body>  
+</html> 

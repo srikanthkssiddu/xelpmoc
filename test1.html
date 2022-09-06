@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Series</title>
+  <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post", action="test2.html">
+      <div class="txt_feild">
+        <input id="username" type="text" required/>
+        <label>Username</label>
+      </div>
+      <div class="txt_feild">
+        <input id="password" type="text" required/>
+        <label>Password</label>
+      </div>
+      
+      <div class="pass">Forgot Password</div>
+      
+      <input type="submit" value="login" onclick="test1()"/>
+      </form>
+    
+  </div>
+  <script>
+    function test1(){
+      console.log("bande")
+      let loginStatus = false;
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      console.log(username, password)
+      if(username == "xelpmoc1" && password == "xelpmoc2"){
+        console.log("inside if")
+        window.location.href ="test2.html";
+        loginStatus = true;  
+        alert("Login Succesful");
+      }
+      else{
+        alert("Invalid username or password");
+        return;
+      }
+    }
+    
+  </script>
+
+</body>
+</html>
